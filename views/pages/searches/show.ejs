@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Collection</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="card">
+        <section>
+            <% searchResults.forEach(book=> {%>
+                <section>
+                    <img src="<%= book.thumbnail %>" alt="">
+                    <h3>
+                        <%= book.title %>
+                    </h3>
+                    <h4>
+                        <%= book.author%>
+                    </h4>
+                    <p>
+                        <%= book.description%>
+                    </p>
+                    <a href="<%= book.previewLink %>">can find the book here</a>
+                </section>
+                <% }) %>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
